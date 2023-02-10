@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: spring-security-test
+
+  config:
+    import:
+      - redis.yml
+      - oauth2-credential.yml
+
+  profiles:
+    active: dev
+    group:
+      dev: "redis-dev"
+
+  session:
+    store-type: redis
